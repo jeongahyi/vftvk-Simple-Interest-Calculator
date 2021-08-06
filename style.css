@@ -1,4 +1,33 @@
-body {background-color:tan;}
-h1{color:green;}
-
-
+body {
+  background-color: black;
+}
+h1 {
+  color: dimgrey;
+  font-weight: 900;
+}
+main {
+  width: 30%;
+  min-width: 400px;
+  margin: 5rem auto;
+  padding: 50px;
+  text-align: center;
+  background: whitesmoke;
+  border-radius: 25px;
+}
+.calculator {
+  padding: 0 10%;
+  text-align: left;
+}
+.input_wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+#amount {
+  width: 50%;
+}
+#years {
+  width: 50%;
+}
+#result {
+  text-align: left;
+}

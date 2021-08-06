@@ -1,16 +1,55 @@
 <html>
-    <head>
+  <head>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Simple Interest Calculator</h1>
+      <form action="#" class="calculator" onsubmit="return compute();">
+        <div class="input_wrapper">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" name="amount" step="1" min="0" />
+        </div>
+        <br />
+        <div class="input_wrapper">
+          <label for="rate">Interest Rate</label>
+          <input
+            type="range"
+            id="rate"
+            name="rate"
+            step="0.1"
+            min="0"
+            max="100"
+            onchange="updateRange(this.value);"
+          />
+          <div id="textRate"></div>
+        </div>
+        <br />
+        <div class="input_wrapper">
+          <label for="years">No. of Years </label>
+          <select name="years" id="years">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+        <br />
+        <div class="input_wrapper">
+          <input type="submit" value="Compute Interest" />
+        </div>
+      </form>
+      <div id="result"></div>
+      <p><small>&copy;Everyone Can Get Rich</small></p>
+    </main>
+  </body>
 </html>
