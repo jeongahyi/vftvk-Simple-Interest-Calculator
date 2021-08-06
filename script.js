@@ -1,16 +1,20 @@
 function compute() {
-  const amount = document.getElementById("amount").value;
+  const principal = document.getElementById("principal").value;
+  if (principal == "" || principal < 1) {
+    alert("enter a positive number :)");
+  }
+  console.log(principal);
   const rate = document.getElementById("rate").value;
   const years = document.getElementById("years").value;
-  const result = (amount * rate * years) / 100;
-
+  const result = (principal * rate * years) / 100;
   const currentYear = new Date().getFullYear();
   const endYear = parseInt(currentYear) + parseInt(years);
 
-  let display = "<p>If you deposit " + amount + ".</p>";
-  display += "<p>at an interest rate of " + rate + "%.</p>";
-  display += "<p>You will receive an amount of " + result + ",</p>";
-  display += "<p>in the year" + endYear + "</p>";
+  let display = "<p>If you deposit <span>" + principal + "</span>.</p>";
+  display += "<p>at an interest rate of <span>" + rate + "</span>%.</p>";
+  display +=
+    "<p>You will receive an amount of <span>" + result + "</span>,</p>";
+  display += "<p>in the year <span>" + endYear + "</span></p>";
 
   document.getElementById("result").innerHTML = display;
   return false;

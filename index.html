@@ -2,14 +2,21 @@
   <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <title>Web App – Simple Interest Calculator</title>
   </head>
   <body>
     <main>
       <h1>Simple Interest Calculator</h1>
       <form action="#" class="calculator" onsubmit="return compute();">
         <div class="input_wrapper">
-          <label for="amount">Amount</label>
-          <input type="number" id="amount" name="amount" step="1" min="0" />
+          <label for="principal">Amount</label>
+          <input
+            type="number"
+            id="principal"
+            name="principal"
+            step="1"
+            min="0"
+          />
         </div>
         <br />
         <div class="input_wrapper">
@@ -19,8 +26,8 @@
             id="rate"
             name="rate"
             step="0.1"
-            min="0"
-            max="100"
+            min="1"
+            max="20"
             onchange="updateRange(this.value);"
           />
           <div id="textRate"></div>
